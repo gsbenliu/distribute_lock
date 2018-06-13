@@ -53,8 +53,6 @@ public class CuratorDistributeLock extends Thread implements Closeable {
                          */
                         .withMode(CreateMode.PERSISTENT)
                         .forPath("/lock/curator_distribute_lock", "131".getBytes());
-            }else{
-                client.create();
             }
         } catch (Exception e) {
             e.printStackTrace();
